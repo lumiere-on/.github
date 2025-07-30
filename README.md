@@ -3,7 +3,7 @@
 포스터자리
 <img width="425" height="598" alt="Image" src="https://github.com/user-attachments/assets/c8b9db78-a48b-4a66-ad15-30cb73c1cd1e" />
 
----<br>
+***
 ### 프로젝트 소개
 - 대학생 인공지능연합 동아리 프로메테우스 7기에서 진행한 프로젝트입니다.
 - 시뮬레이션 환경인 Webot에서 터틀봇을 학습시킨 다음 실물 맵에서 터틀봇을 동작시켰습니다.
