@@ -2,13 +2,13 @@
 ------
 포스터자리
 <img width="425" height="598" alt="Image" src="https://github.com/user-attachments/assets/c8b9db78-a48b-4a66-ad15-30cb73c1cd1e" />
-------
+---
 ### 프로젝트 소개
 - 대학생 인공지능연합 동아리 프로메테우스 7기에서 진행한 프로젝트입니다.
 - 시뮬레이션 환경인 Webot에서 터틀봇을 학습시킨 다음 실물 맵에서 터틀봇을 동작시켰습니다.
 - 실제 구현한 맵 이외에도 다양한 맵에서 터틀봇을 동작시킬 수 있습니다.
 
------
+---
 ### 팀원 구성
 |김용빈|문재원|전지윤|홍지연|
 ||||
@@ -20,7 +20,7 @@
 - 버전 및 이슈 관리: Github
 - 터틀봇 환경: Docker
   
-------
+---
 ### 2. 데이터셋
 - (터틀봇이 벽을 따라가는 데이터)
 ### 3. 프로젝트 구조
@@ -44,8 +44,8 @@
 📁 turtlebot  
 ├── 📁 webots_ros2_turtlebot  
 │   ├── 📁 webots_ros2_turtlebot  # turtlebot activation by rule-based controll
-│   └── 📁 resource  # implement algorithm  
-│   └── 📁 launch   # launch turtlebot on hardware and robot 
+│   ├── 📁 resource  # implement algorithm  
+│   ├── 📁 launch   # launch turtlebot on hardware and robot 
 │   ├── setup.cfg
 │   └── setup.py
 └── 📁 .github/workflows  
@@ -53,7 +53,8 @@
 ├── Dockerfile
 └── raspberry-pi-setup.sh  
 <\pre>
-----
+  
+---
 ### 4. 환경 구현 및 로봇 동작 단계
 
 #### ✅ Step 1. 라즈베리파이 Wi-Fi 설정
