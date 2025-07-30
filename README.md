@@ -25,6 +25,8 @@
 - (터틀봇이 벽을 따라가는 데이터)
 ### 3. 프로젝트 구조
 #### 3.1 Webot simulation
+<pre>
+```text
 📁 webot_simulation  
 ├── 📁 controllers  
 │   ├── 📁 wall_follower  
@@ -35,21 +37,113 @@
 │       └── wall_follower.py   
 └── 📁 worlds  
     └── final_world.wbt
+</pre>
 
-#### 3.2 Turtlebot 
+#### 3.2 Turtlebot #### 
+
+<pre>
+```text
 📁 turtlebot  
-├── 📁 controllers  
-│   ├── 📁 wall_follower  
-│   │   ├── data.csv  
-│   │   └── wall_follower.py  
-│   └── 📁 wall_follower_PID  
-│       ├── data.csv  
-│       └── wall_follower.py   
-└── 📁 worlds  
-    └── final_world.wbt
+├── 📁 webots_ros2_turtlebot  
+│   ├── 📁 webots_ros2_turtlebot  # turtlebot activation by rule-based controll
+│   └── 📁 resource  # implement algorithm  
+│   └── 📁 launch   # launch turtlebot on hardware and robot 
+│   ├── setup.cfg
+│   └── setup.py
+└── 📁 .github/workflows  
+    └── docker-build.yml 
+├── Dockerfile
+└── raspberry-pi-setup.sh  
+<\pre>
 ----
-### 4. 환경 구현 및 동작 
+### 4. 환경 구현 및 로봇 동작 단계
 
+#### ✅ Step 1. 라즈베리파이 Wi-Fi 설정
+
+1. 노트북과 라즈베리파이 보드를 **이더넷 케이블로 연결**합니다.
+2. 터미널에서 다음 명령어로 라즈베리파이에 SSH 접속합니다:
+
+   ```bash
+   ssh simulsimul@192.168.0.49
+   ```
+3. 아래 두 파일을 열어 Wi-Fi ID 및 비밀번호를 수정합니다:
+
+   * `wfa_supplicant.conf`
+   * `50-cloud-init.yaml`
+4. 설정 후 라즈베리파이를 재부팅합니다:
+
+   ```bash
+   sudo reboot
+   ```
+5. 재접속한 뒤, 다음 명령어로 Wi-Fi 설정을 적용합니다:
+
+   ```bash
+   sudo netplan apply
+   ```
+6. `ip a` 명령어로 Wi-Fi 인터페이스(wlan)의 IP가 할당되었는지 확인합니다.
+
+   > ⚠️ Wi-Fi 연결에는 약간의 시간이 걸릴 수 있습니다.
+   > 할당된 IP 주소를 복사해 두세요.
+
+---
+
+#### ✅ Step 2. 노트북과 라즈베리파이 무선 연결
+
+* 이더넷 케이블을 제거하고, **무선(Wi-Fi)으로 연결**합니다.
+* 복사해둔 IP 주소를 사용하여 SSH 접속합니다:
+
+  ```bash
+  ssh simulsimul@<라즈베리파이 IP 주소>
+  ```
+
+---
+
+#### ✅ Step 3. Docker 이미지 다운로드
+
+* 다음 명령어로 Docker 이미지를 내려받습니다:
+
+  ```bash
+  docker pull ybkim4053/simulsimul:latest
+  ```
+
+  > 💡 참고: Wi-Fi가 연결된 상태라면 자동으로 최신 이미지를 받도록 설정되어 있습니다.
+* 이미지가 정상적으로 설치되었는지 확인합니다:
+
+  ```bash
+  docker images
+  ```
+
+---
+
+#### ✅ Step 4. 컨테이너 실행
+
+* 다음 명령어로 컨테이너를 시작합니다:
+
+  ```bash
+  sudo systemctl start turtlebot-auto
+  ```
+* 컨테이너 실행 여부를 확인합니다:
+
+  ```bash
+  docker ps
+  ```
+* 만약 실행되지 않았다면, 아래 명령어로 재시작해봅니다:
+
+  ```bash
+  sudo systemctl restart turtlebot-auto
+  ```
+
+---
+
+#### ✅ Step 5. 실행 로그 확인 및 로봇 동작 확인
+
+* 로그를 실시간으로 보며 터틀봇이 정상적으로 동작하는지 확인합니다:
+
+  ```bash
+  sudo docker logs turtlebot-auto -f
+  ```
+
+---
 
 
 ----
