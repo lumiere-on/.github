@@ -13,9 +13,15 @@
 <br>
 
 ### 팀원 구성 및 역할 분담
-|김용빈|문재원|전지윤|홍지연|
-||||
-||@lumiere-on||
+<div align="center">
+
+| **김용빈** | **문재원** | **전지윤** | **홍지연** |
+| :------: |  :------: | :------: | :------: |
+| [ <br/> @yeon1615](https://github.com/lumiere-on) | [<img src="https://avatars.githubusercontent.com/u/112460466?v=4" height=150 width=150> <br/> @Cheorizzang](https://github.com/Cheorizzang) | [<img src="https://avatars.githubusercontent.com/u/112460506?v=4" height=150 width=150> <br/> @heejiyang](https://github.com/heejiyang) | [<img src="https://avatars.githubusercontent.com/u/76766459?v=4" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) |
+
+</div>
+
+<br>
 
 ### 1. 개발 환경
 - 시뮬레이터: webot
@@ -149,15 +155,21 @@
 -  맵 구현: 2025.6.28 ~ 2025.7.13
 -  실물 맵에 기반한 동작 구현: 2025.7.14 ~ 2025.8.1
 
-#### 작업 관리
+#### 작업 🐵관리
 - Github를 통해 진행상황을 공유했습니다.
 - 오프라인과 온라인 회의를 진행하며 시뮬레이터와 터틀봇의 동작에 관해 이야기했으며 노션에 회의 내용을 기록했습니다. 
 
 
 ### 6. 개선 목표
-- 터틀봇이 다양한 환경에 유연하게 동작할 수 있도록 
+- 터틀봇이 다양한 환경에서 유연하게 동작할 수 있도록 개선할 예정
+- 터틀봇이 미로맵 뿐만 아니라 도로로 구성된 맵에서 자율주행 차로 동작하도록 구현
 
 
----
 ### 7. 프로젝트 후기
+#### 👼 김용빈
 
+#### 🐵 문재원
+ 로봇을 이용한 프로젝트를 처음 진행해보는데 
+#### 🐶 전지윤
+
+#### 🍑 홍지연
