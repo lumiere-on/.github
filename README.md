@@ -25,9 +25,28 @@
 - (터틀봇이 벽을 따라가는 데이터)
 ### 3. 프로젝트 구조
 #### 3.1 Webot simulation
+📁 webot_simulation  
+├── 📁 controllers  
+│   ├── 📁 wall_follower  
+│   │   ├── data.csv  
+│   │   └── wall_follower.py  
+│   └── 📁 wall_follower_PID  
+│       ├── data.csv  
+│       └── wall_follower.py   
+└── 📁 worlds  
+    └── final_world.wbt
 
-
-
+#### 3.2 Turtlebot 
+📁 turtlebot  
+├── 📁 controllers  
+│   ├── 📁 wall_follower  
+│   │   ├── data.csv  
+│   │   └── wall_follower.py  
+│   └── 📁 wall_follower_PID  
+│       ├── data.csv  
+│       └── wall_follower.py   
+└── 📁 worlds  
+    └── final_world.wbt
 ----
 ### 4. 환경 구현 및 동작 
 
