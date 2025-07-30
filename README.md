@@ -26,7 +26,6 @@
 ### 3. 프로젝트 구조
 #### 3.1 Webot simulation
 <pre>
-```text
 📁 webot_simulation  
 ├── 📁 controllers  
 │   ├── 📁 wall_follower  
@@ -42,7 +41,6 @@
 #### 3.2 Turtlebot #### 
 
 <pre>
-```text
 📁 turtlebot  
 ├── 📁 webots_ros2_turtlebot  
 │   ├── 📁 webots_ros2_turtlebot  # turtlebot activation by rule-based controll
