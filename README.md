@@ -40,7 +40,7 @@
 
 #### 3.2 Turtlebot #### 
 
-<pre>
+```text
 📁 turtlebot  
 ├── 📁 webots_ros2_turtlebot  
 │   ├── 📁 webots_ros2_turtlebot  # turtlebot activation by rule-based controll
@@ -52,7 +52,7 @@
     └── docker-build.yml 
 ├── Dockerfile
 └── raspberry-pi-setup.sh  
-<\pre>
+```
   
 ---
 ### 4. 환경 구현 및 로봇 동작 단계
